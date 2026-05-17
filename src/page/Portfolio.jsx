@@ -20,7 +20,7 @@ import konsep from "../assets/sertif/konsep pemrograman.png";
 import laravelImg from "../assets/sertif/laravel.png";
 import reactApp from "../assets/sertif/membuat aplikasi dengan react.png";
 import softwareEng from "../assets/sertif/software engineering.png";
-import toeic from "../assets/sertif/toeic.png";
+import toeic from "../assets/sertif/TOEIC.png";
 import aWS from "../assets/sertif/aws.png";
 import wordpress from "../assets/sertif/wordpress.png";
 import uxfund from "../assets/sertif/UX fundamental.png";
