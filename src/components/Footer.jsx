@@ -55,9 +55,6 @@ export default function Footer() {
           <p className="text-cream/30 text-xs font-body tracking-wide">
             © 2026 Siti Yayuh Addawiyyah Pitalokasari. All rights reserved.
           </p>
-          <p className="text-cream/20 text-xs font-body italic">
-            Built with React & Tailwind CSS
-          </p>
         </div>
       </div>
     </footer>

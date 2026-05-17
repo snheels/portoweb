@@ -10,19 +10,36 @@ import {
 } from "lucide-react";
 import { useReveal } from "../hooks/useReveal";
 
-import backendJs from "../assets/backend dengan javascript.png";
-import dasarJs from "../assets/dasar pemrograman javascript.png";
-import dasarWeb from "../assets/dasar pemrograman web.png";
-import financial from "../assets/financial literacy.png";
-import frontend from "../assets/front end pemula.png";
-import k3 from "../assets/k3.png";
-import konsep from "../assets/konsep pemrograman.png";
-import laravelImg from "../assets/laravel.png";
-import reactApp from "../assets/membuat aplikasi dengan react.png";
-import softwareEng from "../assets/software engineering.png";
+import backendJs from "../assets/sertif/backend dengan javascript.png";
+import dasarJs from "../assets/sertif/dasar pemrograman javascript.png";
+import dasarWeb from "../assets/sertif/dasar pemrograman web.png";
+import financial from "../assets/sertif/financial literacy.png";
+import frontend from "../assets/sertif/front end pemula.png";
+import k3 from "../assets/sertif/k3.png";
+import konsep from "../assets/sertif/konsep pemrograman.png";
+import laravelImg from "../assets/sertif/laravel.png";
+import reactApp from "../assets/sertif/membuat aplikasi dengan react.png";
+import softwareEng from "../assets/sertif/software engineering.png";
+import toeic from "../assets/sertif/toeic.png";
+import aWS from "../assets/sertif/aws.png";
+import wordpress from "../assets/sertif/wordpress.png";
+import uxfund from "../assets/sertif/UX fundamental.png";
+import active from "../assets/sertif/active.jpeg";
+
+import foodWise from "../assets/proje/foodwise.png";
+import kypme from "../assets/proje/kypme.png";
+import kAI from "../assets/proje/KAI.png";
+import lensa from "../assets/proje/lensa.png";
+import makeup from "../assets/proje/makeup.png";
+import emmo from "../assets/proje/emmo.png";
 
 // Data certificates
 const certificates = [
+  {
+    title: "Most Active Student from Wikrama at Coding Camp 2026",
+    image: active,
+    year: "2026",
+  },
   {
     title: "Backend dengan JavaScript",
     image: backendJs,
@@ -34,9 +51,9 @@ const certificates = [
     year: "2026",
   },
   {
-    title: "Dasar Pemrograman Web",
-    image: dasarWeb,
-    year: "2024",
+    title: "TOEIC Excellence Program",
+    image: toeic,
+    year: "2026",
   },
   {
     title: "Financial Literacy",
@@ -49,22 +66,6 @@ const certificates = [
     year: "2026",
   },
   {
-    title: "K3 (Keselamatan & Kesehatan Kerja)",
-    image: k3,
-    year: "2024",
-  },
-  {
-    title: "Konsep Pemrograman",
-    image: konsep,
-    year: "2025",
-  },
-  {
-    title: "Laravel",
-    from: "Dicoding Indonesia",
-    image: laravelImg,
-    year: "2025",
-  },
-  {
     title: "Membuat Aplikasi dengan React",
     image: reactApp,
     year: "2026",
@@ -73,6 +74,42 @@ const certificates = [
     title: "Software Engineering",
     image: softwareEng,
     year: "2026",
+  },
+  {
+    title: "Cloud dan Gen AI di AWS",
+    image: aWS,
+    year: "2026",
+  },
+  {
+    title: "Wordpress Introduction",
+    image: wordpress,
+    year: "2025",
+  },
+  {
+    title: "Konsep Pemrograman",
+    image: konsep,
+    year: "2025",
+  },
+  {
+    title: "Dasar Pemrograman Web",
+    image: dasarWeb,
+    year: "2024",
+  },
+  {
+    title: "Laravel",
+    from: "Dicoding Indonesia",
+    image: laravelImg,
+    year: "2025",
+  },
+  {
+    title: "UX Fundamental",
+    image: uxfund,
+    year: "2024",
+  },
+  {
+    title: "K3 (Keselamatan & Kesehatan Kerja)",
+    image: k3,
+    year: "2024",
   },
 ];
 
@@ -85,7 +122,8 @@ const hardSkills = [
   "Laravel",
   "PHP",
   "MySQL",
-  "PostgreSQL, Flutter",
+  "PostgreSQL",
+  "Flutter",
 ];
 const softSkills = [
   "Problem Solving",
@@ -121,10 +159,11 @@ const projects = [
     ],
     link: "https://github.com/snheels/KAI-Project.git",
     linkText: "View on GitHub",
+    image: kAI,
   },
   {
     title: "Makeup Online Shop",
-    stack: ["React", "Tailwind", "Public API", "Axios"],
+    stack: ["React", "Tailwind", "Public API"],
     desc: "Modern e-commerce makeup store integrated with public API for product catalog and shopping cart.",
     features: [
       "Product catalog from API",
@@ -134,6 +173,24 @@ const projects = [
     ],
     link: "https://github.com/snheels/Makeup-Store.git",
     linkText: "View on GitHub",
+    image: makeup,
+  },
+  {
+    title: "Food Storage Management",
+    stack: ["React", "Laravel", "Axios", "Google Oauth", "Google Calendar"],
+    desc: "Send reminder through google calendar if the food is close to the expired date",
+    features: ["Food Management", "Reminder", "Integrate with google"],
+    link: "https://github.com/ShesaDavina/foodwise-app.git",
+    linkText: "View on GitHub",
+    image: foodWise,
+  },
+  {
+    title: "Management Project and Employee Productivity Tracker",
+    stack: ["Laravel", "React", "MySQL"],
+    desc: "Tracking productivity through daily checkin",
+    features: ["Create project", "Project progress tracking", "Task management"],
+    linkText: "On Progress",
+    image: emmo,
   },
   {
     title: "Student Portal Design",
@@ -147,6 +204,16 @@ const projects = [
     ],
     link: "https://www.figma.com/design/QCCCwxbBNZCKKzrn0siwP1/WireFrame-LensaPelajar?node-id=0-1&t=p0E242ND652ZlXEQ-1",
     linkText: "View on Figma",
+    image: lensa,
+  },
+  {
+    title: "E-commerce",
+    stack: ["Figma", "UI/UX", "Prototyping", "Design System"],
+    desc: "Simple UI mobile for e-commerce",
+    features: ["home page/explore", "Search Product", "Product Catalog"],
+    link: "https://www.figma.com/design/644WO3wPIa3rTeaLbNwgAr/kypme?node-id=90-214&t=NxwhfN8zvT7MUf4F-1",
+    linkText: "View on Figma",
+    image: kypme,
   },
 ];
 
@@ -193,7 +260,7 @@ export default function Portfolio() {
               Learning Path
             </p>
             <h2 className="font-heading text-3xl md:text-4xl text-maroon font-light">
-              Skills & <span className="text-maroon/70">Education</span>
+              Skills & Education
             </h2>
             <div className="w-12 h-px bg-pink mx-auto mt-5" />
           </div>
@@ -269,8 +336,8 @@ export default function Portfolio() {
             <p className="text-maroon/40 text-xs tracking-[0.3em] uppercase font-body mb-3">
               What I've Built
             </p>
-            <h2 className="font-heading text-3xl md:text-4xl text-maroon font-light">
-              My<span className="text-maroon/70"> Projects</span>
+            <h2 className="font-heading text-3xl md:text-3xl text-maroon font-light">
+              My Projects
             </h2>
             <div className="w-12 h-px bg-pink mx-auto mt-5" />
           </div>
@@ -281,6 +348,16 @@ export default function Portfolio() {
                 className="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 flex flex-col"
                 style={{ animationDelay: `${i * 100}ms` }}
               >
+                {/* Image */}
+                <div className="relative h-48 overflow-hidden bg-gradient-to-br from-maroon/5 to-pink/5">
+                  <img
+                    src={proj.image}
+                    alt={proj.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+
                 <div className="relative p-6 pb-0">
                   <div className="flex flex-wrap gap-2 mb-4">
                     {proj.stack.map((tag) => (
@@ -318,7 +395,7 @@ export default function Portfolio() {
                     href={proj.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-6 inline-flex items-center justify-between w-full px-4 py-2.5 bg-gradient-to-r from-pink/10 to-maroon/5 rounded-xl hover:from-pink hover:to-maroon group/link transition-all duration-300"
+                    className="mt-6 inline-flex items-center justify-between w-full px-4 py-2.5 bg-maroon/5 border border-maroon/10 rounded-xl hover:bg-maroon/80 group/link transition-all duration-300"
                   >
                     <span className="text-maroon font-body text-sm font-medium group-hover/link:text-white transition-colors duration-300">
                       {proj.linkText}
@@ -339,15 +416,15 @@ export default function Portfolio() {
       {/* ── CERTIFICATES ── */}
       <section
         id="certificates"
-        className="py-20 px-6 bg-gradient-to-b from-white to-cream/30"
+        className="py-20 px-6 bg-gradient-to-b from-cream to-white"
       >
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="reveal text-center mb-14">
             <p className="text-maroon/40 text-xs tracking-[0.3em] uppercase font-body mb-3">
               Achievement
             </p>
-            <h2 className="font-heading text-3xl md:text-4xl text-maroon font-light">
-              My <span className="text-maroon/70">Certificates</span>
+            <h2 className="font-heading text-3xl md:text-3xl text-maroon font-light">
+              My Certificates
             </h2>
             <div className="w-12 h-px bg-pink mx-auto mt-5" />
           </div>
@@ -372,7 +449,7 @@ export default function Portfolio() {
                 </div>
 
                 <div className="p-5 relative">
-                  <div className="absolute -top-3 right-5 bg-gradient-to-r from-pink to-maroon text-white text-[10px] font-body font-bold px-3 py-1 rounded-full shadow-lg">
+                  <div className="absolute -top-3 right-5  bg-maroon text-white text-[10px] font-body font-bold px-3 py-1 rounded-full shadow-lg">
                     {cert.year}
                   </div>
 
@@ -406,7 +483,7 @@ export default function Portfolio() {
                       onClick={() => goToPage(page)}
                       className={`w-10 h-10 rounded-full font-body text-sm font-medium transition-all duration-300 ${
                         currentPage === page
-                          ? "bg-gradient-to-r from-pink to-maroon text-white shadow-md shadow-pink/20 scale-110"
+                          ? "bg-maroon text-white shadow-md scale-110"
                           : "bg-white border border-pink/30 text-maroon/60 hover:border-pink hover:text-maroon hover:scale-105"
                       }`}
                     >

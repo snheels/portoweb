@@ -3,19 +3,25 @@ import App from "../App";
 import Home from "../page/Home";
 import Portfolio from "../page/Portfolio";
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      errorElement: <h1>Error bro</h1>,
+      element: <App />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: "portfolio",
+          element: <Portfolio />,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: "portfolio",
-        element: <Portfolio />,
-      },
-    ],
+    basename: "/portoweb",
   },
-]);
+);
