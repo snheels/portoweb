@@ -7,6 +7,10 @@ import {
   ArrowRight,
   Database,
   Smartphone,
+  GitBranch,
+  Github,
+  Figma,
+  Mail,
 } from "lucide-react";
 import { useReveal } from "../hooks/useReveal";
 import ContactForm from "../components/ContactForm";
@@ -17,62 +21,60 @@ import { useState, useEffect } from "react";
 export default function Home() {
   useReveal();
 
-  const skills = [
-    {
-      name: "HTML",
-      icon: <Layout size={24} />,
-      level: 90,
-      desc: "Semantic markup & SEO friendly structure",
-    },
-    {
-      name: "CSS",
-      icon: <Layers size={24} />,
-      level: 80,
-      desc: "Flexbox, Grid, & responsive design",
-    },
-    {
-      name: "JavaScript",
-      icon: <Code2 size={24} />,
-      level: 75,
-      desc: "ES6+, DOM manipulation, & async JS",
-    },
-    {
-      name: "PHP",
-      icon: <Server size={24} />,
-      level: 65,
-      desc: "Server-side scripting & backend logic",
-    },
-    {
-      name: "React",
-      icon: <Code2 size={24} />,
-      level: 60,
-      desc: "Component-based UI development",
-    },
-    {
-      name: "Laravel",
-      icon: <Server size={24} />,
-      level: 70,
-      desc: "PHP framework for web artisans",
-    },
-    {
-      name: "MySQL",
-      icon: <Database size={24} />,
-      level: 70,
-      desc: "Database design & complex queries",
-    },
-    {
-      name: "Flutter",
-      icon: <Smartphone size={24} />,
-      level: 45,
-      desc: "Cross-platform mobile development",
-    },
-    {
-      name: "PostgreSQL",
-      icon: <Database size={24} />,
-      level: 50,
-      desc: "Advanced relational database",
-    },
-  ];
+const skills = [
+  {
+    name: "HTML",
+    icon: <Layout size={24} />,
+  },
+  {
+    name: "CSS",
+    icon: <Layers size={24} />,
+  },
+  {
+    name: "JavaScript",
+    icon: <Code2 size={24} />,
+  },
+  {
+    name: "PHP",
+    icon: <Server size={24} />,
+  },
+  {
+    name: "React",
+    icon: <Code2 size={24} />,
+  },
+  {
+    name: "Laravel",
+    icon: <Server size={24} />,
+  },
+  {
+    name: "MySQL",
+    icon: <Database size={24} />,
+  },
+  {
+    name: "Flutter",
+    icon: <Smartphone size={24} />,
+  },
+  {
+    name: "PostgreSQL",
+    icon: <Database size={24} />,
+  },
+  {
+    name: "Git",
+    icon: <GitBranch size={24} />,
+  },
+  {
+    name: "GitHub",
+    icon: <Github size={24} />,
+  },
+  {
+    name: "Figma",
+    icon: <Figma size={24} />,
+  },
+  {
+    name: "Postman",
+    icon: <Mail size={24} />,
+  },
+];
 
   // Typing effect state
   const [displayedName, setDisplayedName] = useState("");
@@ -236,7 +238,7 @@ export default function Home() {
             </div>
 
             <h2 className="font-heading text-3xl md:text-3xl text-maroon">
-              My Tech Stack
+              Skills & Tools
             </h2>
 
             <div className="w-12 h-px bg-pink mx-auto mt-5" />
@@ -256,9 +258,6 @@ export default function Home() {
                     </span>
                     <span className="font-body font-medium text-maroon text-sm">
                       {skill.name}
-                    </span>
-                    <span className="text-xs text-maroon/40 bg-pink/10 rounded-full px-1.5 py-0.5">
-                      {skill.level}%
                     </span>
                   </div>
                 </div>

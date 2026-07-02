@@ -1,4 +1,4 @@
-import { Github, Instagram } from 'lucide-react'
+import { Github, Instagram, Linkedin } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 
 export default function Footer() {
@@ -46,6 +46,17 @@ export default function Footer() {
             >
               <div className="w-10 h-10 rounded-full border border-cream/20 flex items-center justify-center group-hover:border-pink group-hover:bg-pink/10 transition-all duration-300">
                 <Instagram size={17} className="text-cream/60 group-hover:text-pink transition-colors" />
+              </div>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/siti-yayuh-addawiyyah-pitalokasari-437a83337/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkdIn"
+              className="group"
+            >
+              <div className="w-10 h-10 rounded-full border border-cream/20 flex items-center justify-center group-hover:border-pink group-hover:bg-pink/10 transition-all duration-300">
+                <Linkedin size={17} className="text-cream/60 group-hover:text-pink transition-colors" />
               </div>
             </a>
           </div>
